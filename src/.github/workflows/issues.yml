@@ -1,0 +1,9 @@
+name: Display Issues
+on: issues
+jobs:
+  display-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Display Issues
+        run: echo "${{ toJSON(github) }}"
